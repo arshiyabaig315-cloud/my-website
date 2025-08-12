@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Future Workforce: The AI Shift</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #f5f5f5;
+      background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+    }
+
+    table.layout {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #1e1e1e;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    }
+
+    .layout td {
+      padding: 20px;
+      vertical-align: top;
+      border: 1px solid #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #2193b0, #6dd5ed);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      border-radius: 8px;
+      text-shadow: 0 0 10px #00d4ff;
+    }
+
+    h1, h2 {
+      text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff;
+    }
+
+    .intro-text {
+      background-color: #2a2a2a;
+      border-radius: 10px;
+      padding: 2rem;
+    }
+
+    .intro-image {
+      background-color: #444;
+      height: 200px;
+      border-radius: 10px;
+      background-image: url('https://img.freepik.com/free-photo/ai-technology-brain-background-digital-transformation-concept_53876-124643.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .features h2, .job-impact h2, .interactive-section h2, .comparison h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #00d4ff;
+    }
+
+    .feature-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 20px;
+    }
+
+    .feature {
+      background-color: #252525;
+      padding: 1rem;
+      border: 2px solid #3a3a3a;
+      border-radius: 12px;
+      text-align: center;
+      transition: 0.3s ease-in-out;
+    }
+
+    .feature:hover {
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+      transform: translateY(-5px);
+    }
+
+    .feature img {
+      border-radius: 8px;
+      width: 100%;
+      height: auto;
+    }
+
+    .job-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    .job-table th {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem;
+      border: 1px solid #444;
+    }
+
+    .job-table td {
+      padding: 1rem;
+      border: 1px solid #444;
+      background-color: #1f1f1f;
+    }
+
+    .job-table tr:hover td {
+      background-color: #2b2b2b;
+    }
+
+    .faq {
+      background-color: #2c2c2c;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .faq h3 {
+      cursor: pointer;
+    }
+
+    .faq p {
+      display: none;
+      margin-top: 0.5rem;
+    }
+
+    .comparison-table {
+      width: 100%;
+      text-align: center;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    .comparison-table td, .comparison-table th {
+      border: 1px solid #444;
+      padding: 1rem;
+    }
+
+    .btn-learn {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: #00d4ff;
+      color: #000;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #00d4ff;
+    }
+
+    .btn-learn:hover {
+      background-color: #1fffe0;
+      color: #000;
+    }
+
+    .chatbox {
+      background-color: #1f1f1f;
+      padding: 1rem;
+      border-radius: 10px;
+      border: 1px solid #444;
+      margin-top: 1rem;
+    }
+
+    .chatbox input {
+      width: 80%;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 6px;
+      margin-right: 0.5rem;
+    }
+
+    .chatbox button {
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: #00d4ff;
+      color: #000;
+      border-radius: 6px;
+    }
+
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      border-radius: 6px;
+    }
+
+    .icon {
+      margin-right: 8px;
+      color: #00d4ff;
+    }
+
+    @media (max-width: 768px) {
+      .layout td {
+        display: block;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <table class="layout">
+    <tr>
+      <td colspan="2">
+        <header>
+          <h1><i class="fas fa-robot icon"></i>Future Workforce: The AI Shift</h1>
+          <p>Exploring how Artificial Intelligence is reshaping every profession</p>
+        </header>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="intro-text" data-aos="fade-up">
+        <h2>Welcome to the Age of Automation</h2>
+        <p>AI isn't coming — it's already here. From healthcare to education, agriculture to entertainment,
+          AI is transforming how we work, live, and think.</p>
+        <a class="btn-learn" href="https://en.wikipedia.org/wiki/Artificial_intelligence" target="_blank">Learn More</a>
+      </td>
+      <td class="intro-image" data-aos="fade-left"></td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <section class="features">
+          <h2><i class="fas fa-microchip icon"></i> Where AI is Taking Over</h2>
+          <table class="feature-table">
+            <tr>
+              <td class="feature" data-aos="zoom-in">
+                <h3>Healthcare</h3>
+                <img src="https://www.intertek.com/siteassets/blogs/2024-04-16-blog-widebanner.jpg" alt="Healthcare AI">
+                <p>AI assists in diagnostics, robotic surgeries, and predictive health analytics.</p>
+              </td>
+              <td class="feature" data-aos="zoom-in" data-aos-delay="200">
+                <h3>Education</h3>
+                <img src="https://cdn.elearningindustry.com/wp-content/uploads/2019/01/5-ways-ai-is-changing-the-education-industry-1-1024x574.jpg" alt="Education AI">
+                <p>AI-driven tutors, automated grading, and adaptive learning systems.</p>
+              </td>
+              <td class="feature" data-aos="zoom-in" data-aos-delay="400">
+                <h3>Finance</h3>
+                <img src="https://ioaglobal.org/uploads/Role-of-AI-in-Finance-Benefits.jpg" alt="Finance AI">
+                <p>Algorithmic trading, fraud detection, and personal finance bots.</p>
+              </td>
+            </tr>
+          </table>
+        </section>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <section class="job-impact">
+          <h2><i class="fas fa-briefcase icon"></i> AI and the Job Market</h2>
+          <table class="job-table">
+            <thead>
+              <tr>
+                <th>Field</th>
+                <th>AI Role</th>
+                <th>Job Impact</th>
+                <th>Future Outlook</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Manufacturing</td><td>Robotics & Automation</td><td>High Replacement</td><td>Shift to supervision & maintenance roles</td></tr>
+              <tr><td>Retail</td><td>Smart Checkout & Inventory</td><td>Medium Replacement</td><td>Focus on customer engagement roles</td></tr>
+              <tr><td>Transport</td><td>Autonomous Vehicles</td><td>High Replacement</td><td>Rise in remote operation and logistics</td></tr>
+              <tr><td>Marketing</td><td>Predictive Analytics</td><td>Low Replacement</td><td>Increased reliance on data insights</td></tr>
+              <tr><td>Art & Design</td><td>AI-generated Media</td><td>Low to Medium</td><td>AI as creative collaborator</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </td>
+    </tr>
+
+    <tr><td colspan="2">
+      <section class="comparison">
+        <h2><i class="fas fa-balance-scale icon"></i> Human vs AI</h2>
+        <table class="comparison-table">
+          <tr><th>Human Strengths</th><th>AI Strengths</th></tr>
+          <tr><td>Emotional Intelligence</td><td>Data Processing Speed</td></tr>
+          <tr><td>Creativity</td><td>Pattern Recognition</td></tr>
+          <tr><td>Ethics & Morals</td><td>Repetitive Task Efficiency</td></tr>
+          <tr><td colspan="2"><video width="400" controls>
+  <source src="mov_bbb.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML video.
+</video>
+
+<p>
+Video courtesy of 
+<a href="https://www.bigbuckbunny.org/" target="_blank">AI imapacting jobs</a>.
+</p></td></tr>
+        </table>
+      </section>
+    </td></tr>
+
+    <tr><td colspan="2">
+      <section class="interactive-section">
+        <h2><i class="fas fa-question-circle icon"></i> AI FAQs</h2>
+        <div class="faq"><h3 onclick="toggleFAQ(this)">Is AI going to take all jobs?</h3><p>No. AI will automate some tasks, but many roles will evolve or be created.</p></div>
+        <div class="faq"><h3 onclick="toggleFAQ(this)">How can we prepare for an AI-driven future?</h3><p>Learn digital skills, adaptability, and critical thinking.</p></div>
+      </section>
+    </td></tr>
+
+    <tr><td colspan="2">
+      <section class="chatbox">
+        <h2><i class="fas fa-comments icon"></i> Try a Simple AI Chat</h2>
+        <input type="text" placeholder="Ask something..." id="userInput">
+        <button onclick="handleChat()">Send</button>
+        <div id="chatResponse" style="margin-top: 1rem;"></div>
+      </section>
+    </td></tr>
+
+    <tr>
+      <td colspan="2">
+        <footer>
+          <p>&copy; 2025 Future Insights | Designed to reflect the rise of AI</p>
+        </footer>
+      </td>
+    </tr>
+  </table>
+
+  <script>
+    function toggleFAQ(element) {
+      const p = element.nextElementSibling;
+      p.style.display = p.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function handleChat() {
+      const input = document.getElementById("userInput").value.toLowerCase();
+      const responseDiv = document.getElementById("chatResponse");
+
+      let response = "🤖 I'm not sure how to answer that, but I'm learning!";
+
+      if (input.includes("ai")) {
+        response = "🤖 AI stands for Artificial Intelligence – it mimics human learning!";
+      } else if (input.includes("job")) {
+        response = "🤖 Many jobs will evolve rather than disappear. Focus on creativity and people skills!";
+      } else if (input.includes("future")) {
+        response = "🤖 The future with AI will be smart, efficient, and full of innovation!";
+      } else if (input.trim() === "") {
+        response = "🤖 Please type a question first!";
+      }
+
+      responseDiv.innerHTML = `<p style="color:#00d4ff;">${response}</p>`;
+    }
+  </script>
+</body>
+</html>
+
+
