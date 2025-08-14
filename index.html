@@ -208,6 +208,39 @@
     }
   </style>
 </head>
+<script>
+  // Your published-to-web sheet (works with “/d/e/.../” publish links)
+  const GVIZ_URL =
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vSIzMrNgavVFbWzenl-XnkLvlwb6qkw_wihJo4rRd-UAS5B7W6O15fDWt50BL5GmTs3HCk6RpkHSs1S/gviz/tq?tqx=out:json";
+    // If the data is on a different tab, add: &sheet=ExactTabName  (case-sensitive)
+
+  async function loadB2() {
+    const el = document.getElementById("gs-b2");
+    if (!el) return;
+
+    try {
+      // no-store tries to avoid cached results
+      const res = await fetch(GVIZ_URL, { cache: "no-store" });
+      const text = await res.text();
+
+      // gviz wraps JSON in "google.visualization.Query.setResponse(...)"
+      const json = JSON.parse(text.substring(text.indexOf("{"), text.lastIndexOf("}") + 1));
+
+      const rows = json?.table?.rows || [];
+      // B2 = row index 1, column index 1 (0-based)
+      const val = rows?.[1]?.c?.[1]?.v ?? "(empty)";
+      el.textContent = val;
+    } catch (e) {
+      console.error(e);
+      document.getElementById("gs-b2").textContent = "Error loading data";
+    }
+  }
+
+  loadB2();
+  // Optional: refresh every 60s
+  // setInterval(loadB2, 60000);
+</script>
+
 <body>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
